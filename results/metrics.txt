@@ -1,0 +1,44 @@
+============================================================
+NEWS ARTICLE CLASSIFICATION - MODEL EVALUATION RESULTS
+============================================================
+
+Dataset: BBC News (Hugging Face)
+Model: Logistic Regression (multinomial)
+Features: TF-IDF (5000 features, unigrams + bigrams)
+Test Set Size: 445 samples
+
+Accuracy: 0.9775 (97.75%)
+
+------------------------------------------------------------
+Confusion Matrix:
+------------------------------------------------------------
+               business entertai politics    sport     tech 
+business             99        0        2        0        1 
+entertainment         1       75        0        0        1 
+politics              2        0       81        1        0 
+sport                 0        0        1      101        0 
+tech                  0        1        0        0       79 
+
+------------------------------------------------------------
+Classification Report:
+------------------------------------------------------------
+               precision    recall  f1-score   support
+
+     business       0.97      0.97      0.97       102
+entertainment       0.99      0.97      0.98        77
+     politics       0.96      0.96      0.96        84
+        sport       0.99      0.99      0.99       102
+         tech       0.98      0.99      0.98        80
+
+     accuracy                           0.98       445
+    macro avg       0.98      0.98      0.98       445
+ weighted avg       0.98      0.98      0.98       445
+
+------------------------------------------------------------
+Per-Class Accuracy:
+------------------------------------------------------------
+business       : 0.9706 (99/102)
+entertainment  : 0.9740 (75/77)
+politics       : 0.9643 (81/84)
+sport          : 0.9902 (101/102)
+tech           : 0.9875 (79/80)
